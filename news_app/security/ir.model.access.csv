@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_group_user,res.partner.user,model_res_partner,group_user,1,1,1,1
+access_articles_group_user,news.article.user,model_news_article,group_user,1,1,1,1
+access_categories_group_user,news.category.user,model_news_category,group_user,1,0,0,0
+access_tags_group_user,news.tag.user,model_news_tags,group_user,1,0,0,0
+access_categories_group_manager,news.category.manager,model_news_category,group_manager,1,1,1,1
+access_tags_group_manager,news.tag.manager,model_news_tags,group_manager,1,1,1,1

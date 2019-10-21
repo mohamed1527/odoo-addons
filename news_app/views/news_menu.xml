@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Action to open To-do Task List -->
+    <act_window id="news_article_action"
+                name="News Application"
+                res_model="news.article"
+                view_mode="tree,form"/>
+
+    <!--Menu item to open To-do Task list -->
+    <menuitem id="menu_news"
+              name="News"/>
+
+    <menuitem id="menu_new_articles"
+              name="Articles"
+              parent="menu_news"
+              action="news_article_action"/>
+</odoo>

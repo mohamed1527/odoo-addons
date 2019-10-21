@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="module_category_news" model="ir.module.category">
+            <field name="name">News</field>
+        </record>
+
+        <record id="group_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="module_category_news"/>
+        </record>
+
+        <record id="group_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('group_user'))]"/>
+            <field name="category_id" ref="module_category_news"/>
+        </record>
+    </data>
+</odoo>

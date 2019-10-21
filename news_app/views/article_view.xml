@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_article_form" model="ir.ui.view">
+        <field name="name">News Articles</field>
+        <field name="model">news.article</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="title"/>
+                            <field name="date"/>
+                            <field name="author_ids" widget="many2many_tags"/>
+                            <field name="thumbnail" widget="image"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="summary"/>
+                            <field name="category_id"/>
+                            <field name="tags_ids" widget="many2many_tags"/>
+                        </group>
+                        <field name="body"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_article_list_form" model="ir.ui.view">
+        <field name="name">News Articles</field>
+        <field name="model">news.article</field>
+        <field name="arch" type="xml">
+                <tree colors="decoration-muted:is_done==True">
+                    <field name="title"/>
+                    <field name="date"/>
+                    <field name="author_ids" widget="many2many_tags"/>
+                    <field name="summary"/>
+                    <field name="category_id"/>
+                    <field name="tags_ids" widget="many2many_tags"/>
+                </tree>
+        </field>
+    </record>
+    <record id="view_filter_article_form" model="ir.ui.view">
+        <field name="name">News Articles</field>
+        <field name="model">news.article</field>
+        <field name="arch" type="xml">
+                <search>
+                    <field name="date"/>
+                    <field name="title"/>
+                    <field name="tags_ids"/>
+                    <field name="summary"/>
+                    <field name="author_ids"/>
+                </search>
+        </field>
+    </record>
+</odoo>
